@@ -18,20 +18,22 @@ public class Programme {
 
 	public static void main(String [] args)
 	{
-		Banque.getInstance();
-		
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		Client paul = new Client("Dupont", "Paul", 100);
 		Client virginie = new Client("Dupont", "Virginie", -100);
 		
 		paul.lancer();
 		virginie.lancer();
+
+	}
+	
+	
+	public static void KageBunshinNoJUSTU(int nombre, Client cl)
+	{
+		for(int i = 0; i < nombre; i++)
+		{
+			cl.lancer();
+		}
 	}
 	
 }

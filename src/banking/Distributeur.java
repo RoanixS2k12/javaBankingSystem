@@ -89,7 +89,6 @@ public class Distributeur {
 		System.out.println(prenom + " depose " + montant + " de son solde (" + solde + ")");
 		
 
-		
 	}
 	
 }

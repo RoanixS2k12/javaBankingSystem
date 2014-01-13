@@ -24,7 +24,7 @@ public class Banque {
 	/**
 	 * @return
 	 */
-	public static Banque getInstance()
+	public static synchronized Banque getInstance()
 	{
 		if(singleton == null)
 			singleton = new Banque();

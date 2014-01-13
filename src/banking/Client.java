@@ -35,11 +35,15 @@ public class Client implements Runnable {
 	/*_________________________________________________________________*/
 	/**
 	 */
-	public void lancer()
+	synchronized public void lancer()
 	{
-		actifeu = true;
-		threadCourant = new Thread(this);
-		threadCourant.start();
+		if(!actifeu)
+		{
+			actifeu = true;
+			threadCourant = new Thread(this);
+			threadCourant.start();
+		}
+	
 	}
 	
 	/*_________________________________________________________________*/
@@ -47,7 +51,7 @@ public class Client implements Runnable {
 	 */
 	public void arreter()
 	{
-		actifeu = false;
+		actifeu = false;	
 	}
 	
 
